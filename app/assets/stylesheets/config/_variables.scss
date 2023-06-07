@@ -1,0 +1,61 @@
+:root {
+  // Simple fonts
+  --font-family-sans: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  // Classical line heights
+  --line-height-headers: 1.1;
+  --line-height-body: 1.5;
+
+  // Classical and robust font sizes system
+  --font-size-xs: 0.75rem; // 12px
+  --font-size-s: 0.875rem; // 14px
+  --font-size-m: 1rem; // 16px
+  --font-size-l: 1.125rem; // 18px
+  --font-size-xl: 1.25rem; // 20px
+  --font-size-xxl: 1.5rem; // 24px
+  --font-size-xxxl: 2rem; // 32px
+  --font-size-xxxxl: 2.5rem; // 40px
+
+  // Three different text colors
+  --color-text-header: hsl(0, 1%, 16%);
+  --color-text-body: hsl(0, 5%, 25%);
+  --color-text-muted: hsl(0, 1%, 44%);
+
+  // Classical and robust spacing system
+  --space-xxxs: 0.25rem; // 4px
+  --space-xxs: 0.375rem; // 6px
+  --space-xs: 0.5rem; // 8px
+  --space-s: 0.75rem; // 12px
+  --space-m: 1rem; // 16px
+  --space-l: 1.5rem; // 24px
+  --space-xl: 2rem; // 32px
+  --space-xxl: 2.5rem; // 40px
+  --space-xxxl: 3rem; // 48px
+  --space-xxxxl: 4rem; // 64px
+
+  // Application colors
+  --color-primary: hsl(350, 67%, 50%);
+  --color-primary-rotate: hsl(10, 73%, 54%);
+  --color-primary-bg: hsl(0, 85%, 96%);
+  --color-secondary: hsl(101, 45%, 56%);
+  --color-secondary-rotate: hsl(120, 45%, 56%);
+  --color-tertiary: hsl(49, 89%, 64%);
+  --color-glint: hsl(210, 100%, 82%);
+
+  // Neutral colors
+  --color-white: hsl(0, 0%, 100%);
+  --color-background: hsl(30, 50%, 98%);
+  --color-light: hsl(0, 6%, 93%);
+  --color-dark: var(--color-text-header);
+
+   // Border radius
+   --border-radius: 0.375rem;
+
+   // Border
+   --border: solid 2px var(--color-light);
+ 
+   // Shadows
+   --shadow-large:  2px 4px 10px hsl(0 0% 0% / 0.1);
+   --shadow-small:  1px 3px 6px hsl(0 0% 0% / 0.1);
+}
