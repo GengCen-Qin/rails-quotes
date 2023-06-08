@@ -4,6 +4,7 @@
 - bin/rails g system_test quotes 生成一个系统测试
 - rails db:seed 从seed中创建数据到development表中
 - rails db:fixtures:load 从测试数据fixtures中获取数据，并添加到development表中
+- rails db:drop db:create db:migrate 重新构建数据库
 
 ## 项目如何启动
 1. ./bin/setup
