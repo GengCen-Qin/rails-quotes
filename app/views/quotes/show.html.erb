@@ -1,8 +1,20 @@
 <main class="container">
   <%= link_to sanitize("&larr; Back to quotes"), quotes_path %>
+
   <div class="header">
     <h1>
       <%= @quote.name %>
     </h1>
+
+    <%= link_to "New date",
+                new_quote_line_item_date_path(@quote),
+                data: { turbo_frame: dom_id(LineItemDate.new) },
+                class: "btn btn--primary" %>
   </div>
+
+  <%= turbo_frame_tag LineItemDate.new %>
+
+  <%= turbo_frame_tag "line_item_dates" do %>
+    <%= render @line_item_dates, quote: @quote %>
+  <% end %>
 </main>

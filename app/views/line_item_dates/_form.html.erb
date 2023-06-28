@@ -1,0 +1,7 @@
+<%= simple_form_for [quote, line_item_date], html: { class: "form line-item-date" } do |f| %>
+  <%= form_error_notification(line_item_date) %>
+
+  <%= f.input :date, html5: true, input_html: { autofocus: true } %>
+  <%= link_to "Cancel", quote_path(quote), class: "btn btn--light" %>
+  <%= f.submit class: "btn btn--secondary" %>
+<% end %>

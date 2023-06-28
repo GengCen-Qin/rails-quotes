@@ -1,0 +1,20 @@
+<%= turbo_frame_tag line_item_date do %>
+  <div class="line-item-date">
+    <div class="line-item-date__header">
+      <h2 class="line-item-date__title">
+        <%= l(line_item_date.date, format: :long) %>
+      </h2>
+
+      <div class="line-item-date__actions">
+        <%= button_to "Delete",
+                      quote_line_item_date_path(quote, line_item_date),
+                      method: :delete,
+                      form: { data: { turbo_confirm: "Are you sure?" } },
+                      class: "btn btn--light" %>
+        <%= link_to "Edit",
+                    [:edit, quote, line_item_date],
+                    class: "btn btn--light" %>
+      </div>
+    </div>
+  </div>
+<% end %>
