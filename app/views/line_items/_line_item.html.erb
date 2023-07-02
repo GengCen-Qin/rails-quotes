@@ -1,0 +1,30 @@
+<%= turbo_frame_tag line_item do %>
+<div class="line-item">
+  <div class="line-item__name">
+    <%= line_item.name %>
+    <div class="line-item__description">
+      <%= simple_format line_item.description %>
+    </div>
+  </div>
+  <div class="line-item__quantity-price">
+    <%= line_item.quantity %>
+    &times;
+    <%= number_to_currency line_item.unit_price %>
+  </div>
+  <div class="line-item__quantity">
+    <%= line_item.quantity %>
+  </div>
+  <div class="line-item__price">
+    <%= number_to_currency line_item.unit_price %>
+  </div>
+  <div class="line-item__actions">
+    <%= button_to "Delete",
+                  [quote, line_item_date, line_item],
+                  method: :delete,
+                  class: "btn btn--light" %>
+    <%= link_to "Edit",
+                [:edit, quote, line_item_date, line_item],
+                class: "btn btn--light" %>
+  </div>
+</div>
+<% end %>

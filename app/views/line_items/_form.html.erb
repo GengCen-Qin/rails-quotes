@@ -1,0 +1,20 @@
+<%= simple_form_for [quote, line_item_date, @line_item],
+                   html: { class: "form line-item line-item--form" } do |f| %>
+
+  <%= form_error_notification(@line_item) %>
+
+  <%= f.input :name,
+              wrapper_html: { class: "line-item__name" },
+              input_html: { autofocus: true } %>
+  <%= f.input :quantity,
+              wrapper_html: { class: "line-item__quantity" } %>
+  <%= f.input :unit_price,
+              wrapper_html: { class: "line-item__price" } %>
+  <%= f.input :description,
+              wrapper_html: { class: "line-item__description" } %>
+
+  <div class="line-item__actions">
+    <%= link_to "Cancel", quote_path(quote), class: "btn btn--light" %>
+    <%= f.submit class: "btn btn--secondary" %>
+  </div>
+<% end %>

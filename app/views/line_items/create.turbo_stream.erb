@@ -1,0 +1,9 @@
+<% # Step 1: empty the Turbo Frame containing the form %>
+<%= turbo_stream.update nested_dom_id(@line_item_date, LineItem.new), "" %>
+
+<% # Step 2: append the created line item to the list %>
+<%= turbo_stream.append nested_dom_id(@line_item_date, "line_items") do %>
+  <%= render @line_item, quote: @quote, line_item_date: @line_item_date %>
+<% end %>
+
+<%= render_turbo_stream_flash_messages %>

@@ -5,7 +5,7 @@
     <h1>Edit date</h1>
   </div>
 
-  <%= turbo_frame_tag @line_item_date do %>
+  <%= turbo_frame_tag dom_id(@line_item_date, :edit) do %>
     <%= render "form", quote: @quote, line_item_date: @line_item_date %>
   <% end %>
 </main>

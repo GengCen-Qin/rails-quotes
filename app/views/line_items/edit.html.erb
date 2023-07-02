@@ -1,0 +1,14 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to quote"), quote_path(@quote) %>
+
+  <div class="header">
+    <h1>Edit item</h1>
+  </div>
+
+  <%= turbo_frame_tag @line_item do %>
+    <%= render "form",
+               quote: @quote,
+               line_item_date: @line_item_date,
+               line_item: @line_item %>
+  <% end %>
+</main>
