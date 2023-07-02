@@ -48,4 +48,8 @@ class QuotesTest < ApplicationSystemTestCase
     click_on "Delete", match: :first
     assert_no_text @quote.name
   end
+
+  test "#total_price returns the sum of the total price of all line items" do
+    assert_equal 2500, quotes(:first).total_price
+  end
 end
