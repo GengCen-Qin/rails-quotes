@@ -1,5 +1,6 @@
 class QuotesController < ApplicationController
   before_action :set_quote, only: [:show, :edit, :update, :destroy]
+  rescue_from ActiveRecord::RecordNotFound, with: :handle_not_found
 
   def index
     @quotes = current_company.quotes.ordered
@@ -57,5 +58,9 @@ class QuotesController < ApplicationController
 
   def quote_params
     params.require(:quote).permit(:name)
+  end
+
+  def handle_not_found
+    redirect_to quotes_path, notice: "未找到指定数据."
   end
 end
