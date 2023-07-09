@@ -18,4 +18,7 @@ Rails.application.routes.draw do
       resources :line_items, except: [:index, :show]
     end
   end
+
+  # 抛出路由错误异常
+  match "*path", to: "application#handle_routing_error", via: :all
 end
